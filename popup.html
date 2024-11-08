@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Proxy Manager</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <h2>Umbrella Proxy</h2>
+    <form id="proxyForm">
+        <div class="input">
+            <label>Proxy Host:</label>
+            <input type="text" id="host" required><br>
+        </div>
+
+        <div class="input">
+            <label>Proxy Port:</label>
+            <input type="number" id="port" required><br>
+        </div>
+
+        <div class="input">
+            <label>Login:</label>
+            <input type="text" id="username"><br>
+        </div>
+
+        <div class="input">
+            <label>Password:</label>
+            <input type="password" id="password"><br>
+        </div>
+
+        <button type="submit">Save Proxy</button>
+    </form>
+
+    <div class="enable-proxy">
+        <h3>Enable Proxy for this Domain</h3>
+        <label for="enableProxyCheckbox" class="form-switch">
+            <input type="checkbox" id="enableProxyCheckbox">
+            <i></i>
+        </label>
+    </div>
+
+    <div class="domain-list" id="domainList">
+        <h4>Enabled Domains</h4>
+        <ul id="enabledDomainsList"></ul>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
